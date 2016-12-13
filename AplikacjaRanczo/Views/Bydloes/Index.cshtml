@@ -9,6 +9,17 @@
 <p>
     @Html.ActionLink("Dodaj zwierze", "Create")
 </p>
+
+@Html.RadioButton("option", "nr_paszportu") <text>Numer paszportu</text> 
+@Html.RadioButton("option", "nrarimr") <text>Nr ARIMR</text>
+    @using (Html.BeginForm())
+    {
+    <p>
+        Wpisz pełną frazę: @Html.TextBox("searchString")
+        <input type="submit" value="Szukaj" />
+    </p>
+    }
+
 <table class="table">
     <tr>
         <th>
@@ -24,7 +35,7 @@
             @Html.DisplayNameFor(model => model.Plec.nazwa)
         </th>
         <td>
-            @Html.DisplayNameFor(model => model.Matka.id_armir)
+            <b>Matka</b>
         </td>
         <th></th>
     </tr>
@@ -42,7 +53,7 @@
                 @Html.DisplayFor(modelItem => item.Rasa.nazwa)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Plec.nazwa)
+                @Html.DisplayFor(modelItem => item.Plec.skrot)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Matka.id_armir)
@@ -54,5 +65,5 @@
             </td>
         </tr>
     }
-
+   
 </table>

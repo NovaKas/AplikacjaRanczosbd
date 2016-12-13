@@ -11,30 +11,6 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Matka.id_armir)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Matka.id_armir)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Plec.nazwa)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Plec.nazwa)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Rasa.nazwa)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Rasa.nazwa)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.id_armir)
         </dt>
 
@@ -49,10 +25,33 @@
         <dd>
             @Html.DisplayFor(model => model.nr_paszportu)
         </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.Rasa.nazwa)
+        </dt>
 
+        <dd>
+            @Html.DisplayFor(model => model.Rasa.nazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Plec.nazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plec.skrot)
+        </dd>
+ 
+        <dt>
+            <b>Matka</b>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Matka.id_armir)
+        </dd>
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.BydloID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edycja", "Edit", new { id = Model.BydloID }) |
+    @Html.ActionLink("Powrót", "Index")
 </p>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,7 @@ namespace AplikacjaRanczo.Models
     public class Miejscowosc
     {
         public int MiejscowoscID { get; set; }
+        [DisplayName("Miejscowość")]
         public string nazwa { get; set; }
         public int WojewodztwoID { get; set; }
 

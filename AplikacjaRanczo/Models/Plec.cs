@@ -13,7 +13,7 @@ namespace AplikacjaRanczo.Models
         [Required]
         [DisplayName("Płeć")]
         public string nazwa { get; set; }
- 
+        [Required]
         [DisplayName("Płeć skrót")]
         public string skrot { get; set; }
 

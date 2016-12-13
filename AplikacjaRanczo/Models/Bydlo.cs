@@ -15,9 +15,10 @@ namespace AplikacjaRanczo.Models
         public int BydloID { get; set; }
         [Required]
         [StringLength(9)]
-        [DisplayName("Nr ARMIR")]
+        [DisplayName("Nr ARIMR")]
         public string id_armir { get; set; }
         [Required]
+        [DisplayName("Nr paszportu")]
         public string nr_paszportu { get; set; }
         [DisplayName("Matka")]
         public int? MatkaID { get; set; }
@@ -34,7 +35,6 @@ namespace AplikacjaRanczo.Models
 
         
         [ForeignKey("MatkaID")]
-        [DisplayName("Matka")]
         public virtual Bydlo Matka { get; set; }
 
     }

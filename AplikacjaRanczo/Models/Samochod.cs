@@ -11,16 +11,20 @@ namespace AplikacjaRanczo.Models
     {
         [Key]
         public int SamochodID { get; set; }
-        [DisplayName("nr rejestracyjny")]
+        [Required]
+        [DisplayName("Nr rejestracyjny")]
         public string nr_rejestracyjny { get; set; }
-        [DisplayName("marka")]
+        [Required]
+        [DisplayName("Marka")]
         public int MarkaID { get; set; }
+        [DisplayName("Model")]
         public string model { get; set; }
 
         
         [DisplayFormat(DataFormatString = "{0:yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayName("Rocznik")]
         public DateTime rocznik { get; set; }
-        [DisplayName("kraj")]
+        [DisplayName("Kraj")]
         public int KrajID { get; set; }
 
         public virtual Kraj Kraj { get; set; }

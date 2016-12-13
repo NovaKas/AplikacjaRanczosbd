@@ -15,9 +15,39 @@ namespace AplikacjaRanczo.Controllers
         private RanczoContext db = new RanczoContext();
 
         // GET: Bydloes
-        public ActionResult Index()
+        public ActionResult Index(string option, string searchString)
         {
             var bydlo = db.Bydlo.Include(b => b.Matka).Include(b => b.Plec).Include(b => b.Rasa);
+             bydlo = from m in db.Bydlo
+                        select m;
+            /*      if (option == "nrpaszportu")
+                  {
+                      if (!String.IsNullOrEmpty(searchString))
+                      {
+                          bydlo = bydlo.Where(s => s.nr_paszportu.Contains(searchString));
+                      }
+                  }
+                  else if (option == "nrarimr")
+                  {
+                      if (!String.IsNullOrEmpty(searchString))
+                      {
+                          bydlo = bydlo.Where(s => s.id_armir.Contains(searchString));
+                      }
+                  }*/
+
+            if (option == "nr_paszportu")
+            {
+                bydlo = bydlo.Where(s => s.nr_paszportu.Contains(searchString) || searchString == null);
+            }
+            else if (option == "id_arimr")
+            {
+                bydlo = bydlo.Where(s => s.id_armir.Contains(searchString) || searchString == null);
+            }
+            else
+            {
+                bydlo = bydlo.Where(s => s.nr_paszportu.StartsWith(searchString) || searchString == null);
+            }
+
             return View(bydlo.ToList());
         }
 
@@ -135,6 +165,31 @@ namespace AplikacjaRanczo.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public ActionResult Find(string nr_paszportu, string searchString)
+        {
+
+//var bydloo = db.Bydlo.Include(b => b.Matka).Include(b => b.Plec).Include(b => b.Rasa);
+            var bydlo = from m in db.Bydlo
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                bydlo = bydlo.Where(s => s.nr_paszportu.Contains(searchString));
+            }
+
+           /* if (!string.IsNullOrEmpty(nr_paszportu))
+            {
+                bydlo = bydlo.Where(x => x.nr_paszportu == nr_paszportu);
+            }
+            */
+
+
+
+            
+
+            return View(bydlo.ToList());
         }
     }
 }

@@ -159,6 +159,14 @@
     <Compile Include="Migrations\201612131400186_mig2bydloetykiety.Designer.cs">
       <DependentUpon>201612131400186_mig2bydloetykiety.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612132144461_mig3walid.cs" />
+    <Compile Include="Migrations\201612132144461_mig3walid.Designer.cs">
+      <DependentUpon>201612132144461_mig3walid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612132200294_mig4poprawkanazwyarimr.cs" />
+    <Compile Include="Migrations\201612132200294_mig4poprawkanazwyarimr.Designer.cs">
+      <DependentUpon>201612132200294_mig4poprawkanazwyarimr.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bydlo.cs" />
     <Compile Include="Models\KodPocztowy.cs" />
@@ -269,7 +277,6 @@
     <Content Include="Views\Wojewodztwoes\Details.cshtml" />
     <Content Include="Views\Wojewodztwoes\Edit.cshtml" />
     <Content Include="Views\Wojewodztwoes\Index.cshtml" />
-    <Content Include="Views\Bydloes\Find.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -291,6 +298,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612131400186_mig2bydloetykiety.resx">
       <DependentUpon>201612131400186_mig2bydloetykiety.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612132144461_mig3walid.resx">
+      <DependentUpon>201612132144461_mig3walid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612132200294_mig4poprawkanazwyarimr.resx">
+      <DependentUpon>201612132200294_mig4poprawkanazwyarimr.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
