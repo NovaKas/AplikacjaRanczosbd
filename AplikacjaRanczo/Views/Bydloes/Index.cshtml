@@ -1,0 +1,58 @@
+﻿@model IEnumerable<AplikacjaRanczo.Models.Bydlo>
+
+@{
+    ViewBag.Title = "Baza bydła";
+}
+
+<h2>Baza bydła</h2>
+
+<p>
+    @Html.ActionLink("Dodaj zwierze", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.id_armir)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nr_paszportu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rasa.nazwa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Plec.nazwa)
+        </th>
+        <td>
+            @Html.DisplayNameFor(model => model.Matka.id_armir)
+        </td>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id_armir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nr_paszportu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rasa.nazwa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Plec.nazwa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Matka.id_armir)
+            </td>
+            <td>
+                @Html.ActionLink("Edycja", "Edit", new { id = item.BydloID }) |
+                @Html.ActionLink("Szczegoly", "Details", new { id = item.BydloID }) |
+                @Html.ActionLink("Usun", "Delete", new { id = item.BydloID })
+            </td>
+        </tr>
+    }
+
+</table>

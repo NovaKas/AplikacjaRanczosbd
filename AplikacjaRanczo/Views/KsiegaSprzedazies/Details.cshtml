@@ -1,0 +1,58 @@
+﻿@model AplikacjaRanczo.Models.KsiegaSprzedazy
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KsiegaSprzedazy</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Bydlo.id_armir)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bydlo.id_armir)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kontrahent.nazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kontrahent.nazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Samochod.nr_rejestracyjny)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Samochod.nr_rejestracyjny)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.data)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.data)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.czyZakup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.czyZakup)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edycja", "Edit", new { id = Model.KsiegaSprzedazyID }) |
+    @Html.ActionLink("Powrot", "Index")
+</p>

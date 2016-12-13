@@ -1,0 +1,39 @@
+﻿@model IEnumerable<AplikacjaRanczo.Models.KodPocztowy>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Miejscowosc.nazwa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.kod)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Miejscowosc.nazwa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.kod)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.KodPocztowyID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.KodPocztowyID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.KodPocztowyID })
+        </td>
+    </tr>
+}
+
+</table>

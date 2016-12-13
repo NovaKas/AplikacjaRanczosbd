@@ -1,0 +1,58 @@
+﻿@model AplikacjaRanczo.Models.Kontrahent
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Kontrahent</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KodPocztowy.kod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KodPocztowy.kod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ulica)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ulica)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nr_domu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nr_domu)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edycja", "Edit", new { id = Model.KontrahentID }) |
+    @Html.ActionLink("Powrot", "Index")
+</p>

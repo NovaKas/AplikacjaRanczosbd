@@ -1,0 +1,57 @@
+﻿@model IEnumerable<AplikacjaRanczo.Models.Samochod>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Kraj.nazwa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Marka.nazwa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nr_rejestracyjny)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rocznik)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kraj.nazwa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Marka.nazwa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nr_rejestracyjny)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rocznik)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SamochodID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SamochodID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SamochodID })
+        </td>
+    </tr>
+}
+
+</table>

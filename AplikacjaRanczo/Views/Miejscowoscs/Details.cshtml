@@ -1,0 +1,34 @@
+﻿@model AplikacjaRanczo.Models.Miejscowosc
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Miejscowosc</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Wojewodztwo.nazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wojewodztwo.nazwa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nazwa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nazwa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MiejscowoscID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<AplikacjaRanczo.Models.Kontrahent>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        
+        <th>
+            @Html.DisplayNameFor(model => model.nazwa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KodPocztowy.kod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ulica)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nr_domu)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+
+        <td>
+            @Html.DisplayFor(modelItem => item.nazwa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KodPocztowy.kod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ulica)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nr_domu)
+        </td>
+        <td>
+            @Html.ActionLink("Edytuj", "Edit", new { id=item.KontrahentID }) |
+            @Html.ActionLink("Szczegoly", "Details", new { id=item.KontrahentID }) |
+            @Html.ActionLink("Usun", "Delete", new { id=item.KontrahentID })
+        </td>
+    </tr>
+}
+
+</table>

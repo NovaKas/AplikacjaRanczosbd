@@ -1,0 +1,58 @@
+﻿@model IEnumerable<AplikacjaRanczo.Models.KsiegaSprzedazy>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista operacji sprzedaży / zakupu</h2>
+<br />
+<p>
+    @Html.ActionLink("Dodaj", "Create")
+</p>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Bydlo.id_armir)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kontrahent.nazwa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Samochod.nr_rejestracyjny)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.data)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.czyZakup)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bydlo.id_armir)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kontrahent.nazwa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Samochod.nr_rejestracyjny)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.data)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.czyZakup)
+        </td>
+        <td>
+            @Html.ActionLink("Edycja", "Edit", new { id=item.KsiegaSprzedazyID }) |
+            @Html.ActionLink("Szczegoly", "Details", new { id=item.KsiegaSprzedazyID }) |
+            @Html.ActionLink("Usun", "Delete", new { id=item.KsiegaSprzedazyID })
+        </td>
+    </tr>
+}
+
+</table>
