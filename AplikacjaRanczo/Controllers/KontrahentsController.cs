@@ -15,10 +15,33 @@ namespace AplikacjaRanczo.Controllers
         private RanczoContext db = new RanczoContext();
 
         // GET: Kontrahents
-        public ActionResult Index()
+        public ActionResult Index(string searchString,string searchnip)
         {
             var kontrahent = db.Kontrahent.Include(k => k.KodPocztowy);
-            return View(kontrahent.ToList());
+            //import all the contacts from db into 'contacts'variable
+            //this expressions are written in LINQ(language integrated query)
+            kontrahent = from c in db.Kontrahent
+                           select c;
+            //var NipList = new List();
+            /*var kodQuery = from d in db.Kontrahent
+                             orderby d.nip
+                             select d.nip;
+
+            NipList.AddRange(kodQuery.Distinct());
+            ViewBag.nipp = new SelectList(NipList);
+            */
+            //filtering data based on search string..
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                kontrahent = kontrahent.Where(s => s.nazwa.StartsWith(searchString));
+            }
+            /*if (!String.IsNullOrEmpty(searchnip))
+            {
+                kontrahent = kontrahent.Where(x => x.nip == searchnip);
+            }
+            */
+     
+            return View(kontrahent);
         }
 
         // GET: Kontrahents/Details/5

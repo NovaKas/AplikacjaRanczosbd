@@ -20,32 +20,11 @@ namespace AplikacjaRanczo.Controllers
             var bydlo = db.Bydlo.Include(b => b.Matka).Include(b => b.Plec).Include(b => b.Rasa);
              bydlo = from m in db.Bydlo
                         select m;
-            /*      if (option == "nrpaszportu")
-                  {
-                      if (!String.IsNullOrEmpty(searchString))
-                      {
-                          bydlo = bydlo.Where(s => s.nr_paszportu.Contains(searchString));
-                      }
-                  }
-                  else if (option == "nrarimr")
-                  {
-                      if (!String.IsNullOrEmpty(searchString))
-                      {
-                          bydlo = bydlo.Where(s => s.id_armir.Contains(searchString));
-                      }
-                  }*/
+            
 
-            if (option == "nr_paszportu")
+            if (!String.IsNullOrEmpty(searchString))
             {
                 bydlo = bydlo.Where(s => s.nr_paszportu.Contains(searchString) || searchString == null);
-            }
-            else if (option == "id_arimr")
-            {
-                bydlo = bydlo.Where(s => s.id_armir.Contains(searchString) || searchString == null);
-            }
-            else
-            {
-                bydlo = bydlo.Where(s => s.nr_paszportu.StartsWith(searchString) || searchString == null);
             }
 
             return View(bydlo.ToList());

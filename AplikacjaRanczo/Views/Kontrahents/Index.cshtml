@@ -9,6 +9,15 @@
 <p>
     @Html.ActionLink("Dodaj kontrahenta", "Create")
 </p>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Wpisz pełną nazwę: @Html.TextBox("searchString")
+        <input type="submit" value="Szukaj" />
+    </p>
+}
+
 <table class="table">
     <tr>
         

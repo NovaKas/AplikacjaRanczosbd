@@ -48,4 +48,4 @@ C:\Users\User\documents\visual studio 2015\Projects\AplikacjaRanczo\AplikacjaRan
 C:\Users\User\Documents\Visual Studio 2015\Projects\AplikacjaRanczo\AplikacjaRanczo\obj\Debug\AplikacjaRanczo.Migrations.mig1bydlo.resources
 C:\Users\User\Documents\Visual Studio 2015\Projects\AplikacjaRanczo\AplikacjaRanczo\obj\Debug\AplikacjaRanczo.Migrations.mig2bydloetykiety.resources
 C:\Users\User\documents\visual studio 2015\Projects\AplikacjaRanczo\AplikacjaRanczo\obj\Debug\AplikacjaRanczo.Migrations.mig3walid.resources
-C:\Users\User\documents\visual studio 2015\Projects\AplikacjaRanczo\AplikacjaRanczo\obj\Debug\AplikacjaRanczo.Migrations.mig4poprawkanazwyarimr.resources
+C:\Users\User\documents\visual studio 2015\Projects\AplikacjaRanczo\AplikacjaRanczo\obj\Debug\AplikacjaRanczo.Migrations.mig5.resources

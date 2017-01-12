@@ -163,9 +163,9 @@
     <Compile Include="Migrations\201612132144461_mig3walid.Designer.cs">
       <DependentUpon>201612132144461_mig3walid.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201612132200294_mig4poprawkanazwyarimr.cs" />
-    <Compile Include="Migrations\201612132200294_mig4poprawkanazwyarimr.Designer.cs">
-      <DependentUpon>201612132200294_mig4poprawkanazwyarimr.cs</DependentUpon>
+    <Compile Include="Migrations\201612151003091_mig5.cs" />
+    <Compile Include="Migrations\201612151003091_mig5.Designer.cs">
+      <DependentUpon>201612151003091_mig5.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bydlo.cs" />
@@ -302,8 +302,8 @@
     <EmbeddedResource Include="Migrations\201612132144461_mig3walid.resx">
       <DependentUpon>201612132144461_mig3walid.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201612132200294_mig4poprawkanazwyarimr.resx">
-      <DependentUpon>201612132200294_mig4poprawkanazwyarimr.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201612151003091_mig5.resx">
+      <DependentUpon>201612151003091_mig5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

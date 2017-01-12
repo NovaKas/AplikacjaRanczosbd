@@ -18,7 +18,7 @@ namespace AplikacjaRanczo.Models
         public string nip { get; set; }
         [Required]
         [DisplayName("Kod pocztowy")]
-        [RegularExpression(@"[0-9]{2}\-[0-9]{3}")]
+
         public int KodPocztowyID { get; set; }
         [Required]
         [DisplayName("Ulica")]
